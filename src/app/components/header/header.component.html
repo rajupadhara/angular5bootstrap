@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['./candidate-list']">Candidate list</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['./candidate-detail']">Candidate Detail</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+      <li class="nav-item">
+        <div class="btn-group" dropdown>
+          <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+            Button dropdown
+            <span class="caret"></span>
+          </button>
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li role="menuitem">
+              <a class="dropdown-item" [routerLink]="['./candidate-list']">Candidate List</a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item" [routerLink]="['./candidate-detail']">Candidate Detail</a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+            <li class="divider dropdown-divider"></li>
+            <li role="menuitem">
+              <a class="dropdown-item" href="#">Separated link</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="dropdown" dropdown>
+        <a href dropdownToggle (click)="false" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true"
+          aria-expanded="false">Dropdown
+          <span class="caret"></span>
+        </a>
+        <ul *dropdownMenu class="dropdown-menu" role="menu">
+          <li role="menuitem">
+            <a class="dropdown-item" [routerLink]="['./candidate-list']">Candidate List</a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item" [routerLink]="['./candidate-detail']">Candidate Detail</a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem">
+            <a class="dropdown-item" href="#">Separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <form class="form-inline">
+      <a class="nav-link" href="#">LogOut</a>
+    </form>
+  </div>
+</nav>
